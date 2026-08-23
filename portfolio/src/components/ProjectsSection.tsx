@@ -36,8 +36,11 @@ const ProjectsSection = () => {
         {/* Projects Grid */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 w-full">
           {projectsList.map((project, index) => {
+            const isPortfolio = index === 0;
+            const portfolioGithubUrl = "https://github.com/mohamed44-mh/projets/tree/main/portfolio";
+
             const handleClick = () => {
-              if (index === 0) {
+              if (isPortfolio) {
                 // Portfolio project → scroll to top of this site
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               } else {
@@ -66,13 +69,26 @@ const ProjectsSection = () => {
 
                   {/* Top-Right Action Buttons - visible on hover */}
                   <div className="absolute top-3.5 right-3.5 flex items-center gap-2 z-20 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300">
-                    <button
-                      onClick={(e) => { e.stopPropagation(); handleClick(); }}
-                      className="w-9 h-9 rounded-xl bg-secondary/80 backdrop-blur-md border border-border/50 text-foreground hover:text-primary flex items-center justify-center transition-all shadow-md hover:scale-105"
-                      aria-label="View on GitHub"
-                    >
-                      <Github size={16} />
-                    </button>
+                    {isPortfolio ? (
+                      <a
+                        href={portfolioGithubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => { e.stopPropagation(); }}
+                        className="w-9 h-9 rounded-xl bg-secondary/80 backdrop-blur-md border border-border/50 text-foreground hover:text-primary flex items-center justify-center transition-all shadow-md hover:scale-105"
+                        aria-label="View on GitHub"
+                      >
+                        <Github size={16} />
+                      </a>
+                    ) : (
+                      <button
+                        onClick={(e) => { e.stopPropagation(); handleClick(); }}
+                        className="w-9 h-9 rounded-xl bg-secondary/80 backdrop-blur-md border border-border/50 text-foreground hover:text-primary flex items-center justify-center transition-all shadow-md hover:scale-105"
+                        aria-label="View on GitHub"
+                      >
+                        <Github size={16} />
+                      </button>
+                    )}
                     <button
                       onClick={(e) => { e.stopPropagation(); handleClick(); }}
                       className="w-9 h-9 rounded-xl bg-secondary/80 backdrop-blur-md border border-border/50 text-foreground hover:text-primary flex items-center justify-center transition-all shadow-md hover:scale-105"

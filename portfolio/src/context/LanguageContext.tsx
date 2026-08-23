@@ -94,16 +94,16 @@ export const translations = {
           description:
             'Un portfolio personnel présentant mes projets de développement web FullStack. Découvrez mes compétences à travers des projets réels et fonctionnels.',
           technologies: ['React', 'TypeScript', 'Vite'],
-          github: 'https://github.com/mohamed44-mh/projets',
-          demo: 'https://example.com',
+          github: 'https://github.com/mohamed44-mh/projets/tree/main/portfolio',
+          demo: 'https://github.com/mohamed44-mh/projets/tree/main/portfolio',
         },
         {
           title: 'Vente & Location d’Appartements',
           description:
             'Découvrez nos appartements à vendre et à louer, facilement et rapidement. Trouvez votre espace idéal en quelques clics !',
           technologies: ['Node.js', 'React', 'MySQL'],
-          github: 'https://github.com/mohamed44-mh/projets',
-          demo: 'https://example.com',
+          github: 'https://github.com/mohamed44-mh/projets/tree/main/portfolio',
+          demo: 'https://github.com/mohamed44-mh/projets/tree/main/portfolio',
         },
       ],
       btnMore: 'Voir plus sur GitHub',
@@ -225,8 +225,8 @@ export const translations = {
           description:
             'A personal portfolio presenting my FullStack web development projects. Discover my skills through real, working applications.',
           technologies: ['React', 'TypeScript', 'Vite'],
-          github: 'https://github.com/mohamed44-mh/projets',
-          demo: 'https://example.com',
+          github: 'https://github.com/mohamed44-mh/projets/tree/main/portfolio',
+          demo: 'https://github.com/mohamed44-mh/projets/tree/main/portfolio',
         },
         {
           title: 'Apartments Sale & Rental',
