@@ -37,7 +37,7 @@ const Navbar = () => {
     >
       <div className="w-full max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-16">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#home" className="font-display font-bold text-xl sm:text-2xl gradient-text">
+          <a href="#home" className="font-display font-bold text-[23px] sm:text-[28px] gradient-text">
             ME.
           </a>
 
