@@ -5,6 +5,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/context/LanguageContext';
+import { db } from "./../firebase.js";
+import { collection, addDoc } from "firebase/firestore";
 
 const API_URL = 'http://localhost:3001/api/contact';
 
@@ -31,19 +33,28 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+      await addDoc(collection(db, "contacts"), {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        createdAt: new Date(),
       });
-
-      if (!res.ok) throw new Error('Server error');
 
       toast({
         title: t.contact.successMsg,
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch {
+
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+
+    } catch (error) {
+      console.error("Erreur Firebase :", error);
+
       toast({
         title: '❌ Erreur',
         description: 'Une erreur est survenue. Veuillez réessayer.',
