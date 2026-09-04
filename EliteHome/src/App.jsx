@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Page from './component/loding/page.jsx';
-import Auth from './component/authentification/Auth.jsx';
+import Auth from './component/Authentification/Auth.jsx';
 import DashboardLayout from './component/Dashboard/DashboardLayout';
 import DashboardHome from './component/Dashboard/Pages/DashboardHome';
 import Ajouter from './component/Dashboard/Pages/Ajouter';
