@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#93c5fd" />
+    </linearGradient>
+  </defs>
+  <!-- Background Card -->
+  <rect width="512" height="512" rx="120" fill="url(#bgGrad)" />
+  
+  <!-- Outer Roof Peak (Accent) -->
+  <path d="M 256 80 L 420 220 L 375 220 L 256 118 L 137 220 L 92 220 Z" fill="url(#accentGrad)" />
+  
+  <!-- Main House Silhouette -->
+  <path d="M 256 125 L 390 235 L 350 235 L 350 390 C 350 402 340 412 328 412 L 184 412 C 172 412 162 402 162 390 L 162 235 L 122 235 Z" fill="#ffffff" />
+  
+  <!-- Stylized "E" Letter Inside House -->
+  <path d="M 215 260 H 295 M 215 315 H 275 M 215 370 H 295" stroke="#1e40af" stroke-width="26" stroke-linecap="round" />
+</svg>

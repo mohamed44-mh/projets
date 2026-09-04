@@ -1,0 +1,330 @@
+.ajouter-page-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ajouter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.header-titles h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.header-titles p {
+    color: #64748b;
+    margin: 0.25rem 0 0 0;
+    font-size: 1rem;
+}
+
+.btn-add-main,
+.btn-back {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-add-main {
+    background: #2563eb;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.btn-add-main:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.btn-back {
+    background: white;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-back:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
+
+.ajouter-content-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+}
+
+.form-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f1f5f9;
+}
+
+.form-card h2 {
+    margin-bottom: 2.5rem;
+    color: #0f172a;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.form-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #2563eb;
+    border-radius: 3px;
+}
+
+.property-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.875rem 1.125rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+    color: #1e293b;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.upload-zone {
+    width: 100%;
+}
+
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3.5rem 2rem;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #64748b;
+}
+
+.upload-label:hover {
+    background: #eff6ff;
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.upload-label span {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.preview-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.preview-item {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 2px solid white;
+}
+
+.btn-remove-preview {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #1e293b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.2);
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    color: #94a3b8;
+    background: white;
+    border: 2px dashed #e2e8f0;
+    border-radius: 32px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.empty-state-icon {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    color: #cbd5e1;
+}
+
+@media (max-width: 1150px) {
+    .ajouter-page-container {
+        padding: 1.5rem;
+    }
+
+    .form-card {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ajouter-page-container {
+        padding: 0.5rem;
+    }
+
+    .ajouter-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+        padding-bottom: 1rem;
+    }
+
+    .header-titles h1,
+    .ajouter-header h1 {
+        font-size: 1.35rem;
+    }
+
+    .subtitle {
+        font-size: 0.82rem;
+        margin-top: 0.15rem;
+    }
+
+    .btn-add-main,
+    .btn-back {
+        width: auto;
+        padding: 0.55rem 1.25rem;
+        font-size: 0.85rem;
+        border-radius: 10px;
+        justify-content: center;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .form-card {
+        padding: 1.25rem 1rem;
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-titles h1,
+    .ajouter-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .upload-label {
+        padding: 1.75rem 0.75rem;
+    }
+
+    .preview-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-submit {
+        font-size: 0.875rem;
+        padding: 0.75rem;
+    }
+}
